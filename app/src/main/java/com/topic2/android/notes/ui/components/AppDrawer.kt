@@ -1,9 +1,6 @@
-package com.topic2.android.notes.ui.components
-
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.RowScopeInstance.align
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
@@ -18,8 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.topic2.android.notes.routing.NotesRouter
 import com.topic2.android.notes.routing.Screen
-import com.topic2.android.notes.theme.NotesTheme
-import com.topic2.android.notes.theme.NotesThemeSettings
+
 
 @Composable
 private fun AppDrawerHeader(){
@@ -31,10 +27,11 @@ private fun AppDrawerHeader(){
                 .tint(MaterialTheme.colors.onSurface),
             modifier = Modifier.padding(16.dp)
         )
+        Text(text = "Заметки",
+            modifier = Modifier
+                .align(alignment = Alignment.CenterVertically))
     }
-    Text(text = "Заметки",
-        modifier = Modifier
-            .align(alignment = Alignment.CenterVertically))
+
 }
 
 @Preview
@@ -45,6 +42,7 @@ fun AppDrawerHeaderPreview(){
     }
 }
 
+@Composable
 private fun ScreenNavigationButton(
     icon: ImageVector,
     label: String,
@@ -138,7 +136,6 @@ private fun LightDarkThemeItem(){
         )
     }
 }
-
 @Preview
 @Composable
 fun LightDarkThemeItemPreview() {
@@ -180,7 +177,6 @@ fun AppDrawer(
 
     }
 }
-
 @Preview
 @Composable
 fun AppDrawerPreview(){
