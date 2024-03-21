@@ -1,5 +1,3 @@
-package com.topic2.android.notes.ui.screens
-
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.lazy.LazyColumn
@@ -187,7 +185,7 @@ private fun Content(
                 Note(
                     note = note,
                     onNoteClick = onNoteClick,
-                    isSelected = isNoteSelected
+                    //isSelected = isNoteSelected
                 )
             }
         }
