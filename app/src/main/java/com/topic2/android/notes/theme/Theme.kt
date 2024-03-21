@@ -1,5 +1,3 @@
-package com.topic2.android.notes.theme
-
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
@@ -9,6 +7,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
+import com.topic2.android.notes.theme.rwGreen
+import com.topic2.android.notes.theme.rwGreenDark
+import com.topic2.android.notes.theme.rwRed
 
 private val LightThemeColors = lightColors(
   primary = rwGreen,
@@ -16,10 +17,11 @@ private val LightThemeColors = lightColors(
   secondary = rwGreen
 )
 
-private val DarkThemeColors = lightColors(
-  primary = rwGreen,
-  primaryVariant = rwGreenDark,
-  secondary = rwGreen
+private val DarkThemeColors = darkColors(
+  primary = Color(0xFF00A055),
+  primaryVariant = Color(0xFF00F884),
+  secondary = rwRed,
+  onPrimary = Color.White
 )
 
 /**
@@ -39,10 +41,3 @@ fun NotesTheme(content: @Composable () -> Unit) {
 object NotesThemeSettings {
   var isDarkThemeEnabled by mutableStateOf(false)
 }
-
-private val DarkThemeColors = darkColors(
-  primary = Color(0xFF00A055),
-  primaryVariant = Color(0xFF00F884),
-  secondary = rwRed,
-  onPrimary = Color.White
-)
