@@ -1,6 +1,5 @@
 package com.topic2.android.notes
 
-import MainActivity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler

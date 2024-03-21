@@ -1,3 +1,5 @@
+package com.topic2.android.notes.ui.components
+
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.background
 import androidx.compose.runtime.Composable
@@ -20,7 +22,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.topic2.android.notes.domain.model.NoteModel
-import com.topic2.android.notes.ui.components.NoteColor
 import com.topic2.android.notes.util.fromHex
 
 @OptIn(ExperimentalMaterialApi::class)

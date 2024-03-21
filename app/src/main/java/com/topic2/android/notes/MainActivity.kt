@@ -1,3 +1,5 @@
+package com.topic2.android.notes
+
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -12,10 +14,13 @@ import androidx.compose.material.Surface
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
-import com.topic2.android.notes.NotesApplication
 import com.topic2.android.notes.routing.NotesRouter
 import com.topic2.android.notes.routing.Screen
+import com.topic2.android.notes.theme.NotesTheme
+import kotlinx.coroutines.launch
+import com.topic2.android.notes.ui.screens.NotesScreen
 import com.topic2.android.notes.ui.screens.SaveNoteScreen
+import com.topic2.android.notes.ui.screens.TrashScreen
 
 /**
  * Main activity приложения.

@@ -14,10 +14,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 /**
- * Модель просмотра, используемая для хранения глобального состояния приложения.
  * View model used for storing the global app state.
  *
- * Эта модель просмотра используется для всех экранов.
  * This view model is used for all screens.
  */
 class MainViewModel(private val repository: Repository) : ViewModel() {
@@ -25,6 +23,7 @@ class MainViewModel(private val repository: Repository) : ViewModel() {
     val notesNotInTrash: LiveData<List<NoteModel>> by lazy {
         repository.getAllNotesNotInTrash()
     }
+
     val notesInTrash by lazy { repository.getAllNotesInTrash() }
 
     private var _noteEntry = MutableLiveData(NoteModel())
@@ -37,7 +36,6 @@ class MainViewModel(private val repository: Repository) : ViewModel() {
 
     private var _selectedNotes = MutableLiveData<List<NoteModel>>(listOf())
     val selectedNotes: LiveData<List<NoteModel>> = _selectedNotes
-
     fun onCreateNewNoteClick() {
         _noteEntry.value = NoteModel()
         NotesRouter.navigateTo(Screen.SaveNote)
