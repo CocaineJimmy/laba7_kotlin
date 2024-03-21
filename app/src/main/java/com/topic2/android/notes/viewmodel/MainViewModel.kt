@@ -39,14 +39,11 @@ class MainViewModel(private val repository: Repository) : ViewModel() {
     val selectedNotes: LiveData<List<NoteModel>> = _selectedNotes
 
     fun onCreateNewNoteClick() {
-        // TODO - Open SaveNoteScreen
         _noteEntry.value = NoteModel()
         NotesRouter.navigateTo(Screen.SaveNote)
     }
 
     fun onNoteClick(note: NoteModel) {
-        // TODO - Open SaveNoteScreen in Edit mode
-        _noteEntry.value = note
         NotesRouter.navigateTo(Screen.SaveNote)
 
     }
